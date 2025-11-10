@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greeting Message</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 2em;
+      color: #00796b;
+    }
+    p {
+      font-size: 1.2em;
+      color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="greeting"></h1>
+  <p>Welcome to my webpage!</p>
+
+  <script>
+    const greeting = document.getElementById("greeting");
+    const hour = new Date().getHours();
+
+    if (hour < 12) {
+      greeting.textContent = "Good Morning! 🌅";
+    } else if (hour < 18) {
+      greeting.textContent = "Good Afternoon! ☀️";
+    } else {
+      greeting.textContent = "Good Evening! 🌙";
+    }
+  </script>
+</body>
+</html>
